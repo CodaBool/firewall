@@ -24,5 +24,13 @@
 # subnet other than /32 must be 0.
 #
 # Example Rules:
-1,Block,-,-,10.0.0.1/32,10.0.1.0/24,6,-,80,Block 10.0.0.1 from accessing a web server on the 10.0.1.0/24 network
-2,Allow,-,-,10.0.0.1/32,10.0.1.125/32,6,-,80,Allow 10.0.0.1 to access a web server on 10.0.1.125 overriding previous rule
+#1,Block,-,-,10.0.0.1/32,10.0.1.0/24,6,-,80,Block 10.0.0.1 from accessing a web server on the 10.0.1.0/24 network
+#2,Allow,-,-,10.0.0.1/32,10.0.1.125/32,6,-,80,Allow 10.0.0.1 to access a web server on 10.0.1.125 overriding previous rule
+
+# Rule Number, Action, -, -, Source CIDR, Destination CIDR, Protocol: 17=UDP | 6=TCP, Source Port, Destination Port, Comment
+
+# Headquarters Network (hq1-hq5). Subnet 10.0.0.0/24
+# US Network (us1-us5). Subnet 10.0.1.0/24
+# India Network (in1-in5). Subnet 10.0.20.0/24
+# China Network (cn1-cn5). Subnet 10.0.30.0/24
+# UK Network (uk1-uk5). Subnet 10.0.40.0/24
